@@ -1,3 +1,4 @@
+
 import {searchWeather} from "./findApi.js";
 import ubication from "./myUbication.js";
 

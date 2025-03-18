@@ -1,4 +1,3 @@
-
 import {searchWeather} from "./findApi.js";
 import ubication from "./myUbication.js";
 
@@ -69,7 +68,7 @@ addEventListener("scroll", (e)=>{
 
 search.addEventListener("submit", async(e)=>{
      
-     alert("dfgh");
+     // alert("dfgh");
      const data = Object.fromEntries(new FormData(e.target));
      const url = new URL(e.target.action);
      console.log(url);

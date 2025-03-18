@@ -1,4 +1,4 @@
-@import url(variables.css);
+@import url(variable.css);
 
 * {
     margin: 0;
@@ -10,10 +10,17 @@
 
 body {
     background: var(--background-1);
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: ¨header¨
+    ¨main¨;    
+    
 }
 header{
+    grid-area: header;
     transition:height 0.4s ease-in-out;
-    background: red;
+    /* background: red; */
     /* height: 420px; */
 }
 #navbar {
@@ -137,8 +144,129 @@ header{
     background-color: var(--color-1);
     color: var(--color-2);
     font-size: 16px;
-    font-weight: normal;
 }
 .form__submit input.active{
     background: var(--button-1);
+}
+/***************** cards 1 *******************/
+.main {
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: main;
+    margin-top: 410px;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.card1 {
+    background-color: #f0e6ff;
+    border-radius: 15px;
+    width: 182px;
+    height: 65px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 9px;
+    align-items: center;
+}
+
+.card-header {
+    display: flex;
+    flex-direction: column
+}
+
+.icon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-right: 10px; */
+    /* font-size: 18px; */
+}
+
+.title {
+    font-size: 14px;
+    font-family: "OpenSans-Regular";
+    color: #333;
+}
+
+.value {
+    font-size: 16px;
+    font-family: "OpenSans_SemiCondensed-Regular";
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.change__down {
+    font-size: 11px;
+    font-family: "OpenSans_SemiCondensed-Medium";
+    display: flex;
+    align-items: center;
+    color: #ff5252;
+}
+
+.change__up {
+    font-size: 11px;
+    font-family: "OpenSans_SemiCondensed-Medium";
+    display: flex;
+    align-items: center;
+    color: #4caf50;
+}
+/********** hourly ************/
+.section__hourly {
+    padding: 20px;
+}
+.div__forecast {
+    display: flex;
+    background: var(--card-1);
+    flex-direction: column;
+    border-radius: 18px;
+    width: 380px;
+    height: 150px;
+}
+.div__title-hour {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    gap: 8px;
+    font-family: "OpenSans_Condensed-Regular";
+}
+.bloque__hourly{
+    display: flex;
+    justify-content: space-evenly;
+}
+.hourly {
+    width: 28px;
+}
+.hourly img {
+    width: 24px;
+    height: 32px;
+}
+/*--------------------------Forecast----------------------------*/
+.temperature{
+    background: #d0bcff4d;
+    width: 370px;
+    height: 230px;
+    margin: auto;
+    border-radius: 20px;
+    padding: 20px;
+}
+.title{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+canvas {
+    position: absolute;
+    margin: 0 auto;
+    width: 80%;
 }

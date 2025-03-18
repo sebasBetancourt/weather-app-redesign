@@ -1,3 +1,5 @@
+
+
 const ctx = document.getElementById('tempChart').getContext('2d');
     
 // Crear el degradado para el fondo

@@ -7,38 +7,159 @@
     <link rel="shortcut icon" href="./storage/img/logo.png" type="image/png">
     <link rel="stylesheet" href="./css/style.css">
     <script type="module" defer src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" defer src="js/graph.js"></script>
 </head>
 <body>
-   <header>
-        <nav id="navbar">
-           <form id="search" class="form__search" action="current.json" method="get">
-                <div class="div__icon">
-                    <input type="text" name="location">
-                    <img src="storage/img/search_white.png">
-                </div>
-           </form>
-            <div class="div__body">
-                <div class="div__title">
-                    <h1 id="temp_c">0°</h1>
-                    <span id="feelslike_c"></span>
-                </div>
-                <div class="div__image">
-                    <img id="icon" src="storage/img/cloud_and_sun_1.png">
-                    <span id="status">Cloudy</span>
-                </div>
-            </div>
-            <div id="div__footer" class="div__footer">
-                <span id="last_updated">January 01, 00:00</span>
-                <p><strong id="maxtemp_c">Day 0°</strong><strong id="mintemp_c">Night -0°</strong></p>
-            </div>
-            <form class="form__submit" action="?" method="get">
-                <input type="submit" class="active" value="Today">
-                <input type="submit" value="Tomorrow">
-                <input type="submit" value="10 days">
+    <header>
+         <nav id="navbar">
+            <form id="search" class="form__search" action="current.json" method="get">
+                 <div class="div__icon">
+                     <input type="text" name="location">
+                     <img src="storage/img/search_white.png">
+                 </div>
             </form>
-        </nav>
-   </header>
-
-   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+             <div class="div__body">
+                 <div class="div__title">
+                     <h1 id="temp_c">0°</h1>
+                     <span id="feelslike_c"></span>
+                 </div>
+                 <div class="div__image">
+                     <img id="icon" src="storage/img/cloud_and_sun_1.png">
+                     <span id="status">Cloudy</span>
+                 </div>
+             </div>
+             <div id="div__footer" class="div__footer">
+                 <span id="last_updated">January 01, 00:00</span>
+                 <p><strong id="maxtemp_c">Day 0°</strong><strong id="mintemp_c">Night -0°</strong></p>
+             </div>
+             <form class="form__submit" action="?" method="get">
+                 <input type="submit" class="active" value="Today">
+                 <input type="submit" value="Tomorrow">
+                 <input type="submit" value="10 days">
+             </form>
+         </nav>
+    </header>
+    <main class="main">
+        <article>
+            <section class="section__Cards1">
+                <div class="container">
+                    <div class="card1">
+                        <div class="icon">
+                            <img src="storage/img/air.png">
+                        </div>
+                        <div class="card-header">
+                            <div class="title">
+                               <span>Wind speed</span> 
+                            </div>
+                            <div class="value">
+                                <span>12km/h</span>
+                                <span class="change__down">
+                                    ↓ 2 km/h
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card1">
+                        <div class="icon">
+                            <img src="storage/img/rainy.png">
+                        </div>
+                        <div class="card-header">
+                            <div class="title">
+                               <span>Rain chance</span> 
+                            </div>
+                            <div class="value">
+                                <span>24%</span>
+                                <span class="change__up">
+                                    ↑ 10%
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card1">
+                        <div class="icon">
+                            <img src="storage/img/waves.png">
+                        </div>
+                        <div class="card-header">
+                            <div class="title">
+                               <span>Pressure</span> 
+                            </div>
+                            <div class="value">
+                                <span>720 hpa</span>
+                                <span class="change__up">
+                                    ↑ 32 hpa
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card1">
+                        <div class="icon">
+                            <img src="storage/img/light_mode.png">
+                        </div>
+                        <div class="card-header">
+                            <div class="title">
+                               <span>UV Index</span> 
+                            </div>
+                            <div class="value">
+                                <span>2,3</span>
+                                <span class="change__down">
+                                    ↓ 0.3
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+        <article>
+            <section class="section__hourly">
+                <div class="div__forecast">
+                    <div class="div__title-hour">
+                        <img src="storage/img/history_toggle_off.png">
+                        <span>Hourly forecast</span>
+                    </div>
+                    <div class="bloque__hourly">
+                        <div class="hourly">
+                            <span>Now</span>
+                            <img src="storage/img/cloud_and_sun_1.png">
+                            <span>10°</span>
+                        </div>
+                        <div class="hourly">
+                            <span>10AM</span>
+                            <img src="storage/img/cloud_and_sun_1.png">
+                            <span>8°</span>
+                        </div>
+                        <div class="hourly">
+                            <span>11AM</span>
+                            <img src="storage/img/cloud_and_sun_1.png">
+                            <span>5°</span>
+                        </div>
+                        <div class="hourly">
+                            <span>12AM</span>
+                            <img src="storage/img/cloud_and_sun_1.png">
+                            <span>12°</span>
+                        </div>
+                        <div class="hourly">
+                            <span>1PM</span>
+                            <img src="storage/img/cloud_and_sun_1.png">
+                            <span>9°</span>
+                        </div>
+                        <div class="hourly">
+                            <span>2PM</span>
+                            <img src="storage/img/cloud_and_sun_1.png">
+                            <span>12°</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+        <div class="temperature">
+            <div class="title">
+                <img src="../storage/img/calendar_month.png" alt="">
+                <h3>Day forecast</h3>
+            </div>
+            <canvas id="tempChart"></canvas>
+        </div>
+    </main>
 </body>
 </html>

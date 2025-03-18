@@ -1,13 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sp">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Google Weather App Redesign</title>
+    <link rel="shortcut icon" href="./storage/img/logo.png" type="image/png">
+    <link rel="stylesheet" href="./css/style.css">
     <script type="module" defer src="js/main.js"></script>
 </head>
 <body>
-    
+   <header>
+        <nav id="navbar">
+           <form id="search" class="form__search" action="current.json" method="get">
+                <div class="div__icon">
+                    <input type="text" name="location">
+                    <img src="storage/img/search_white.png">
+                </div>
+           </form>
+            <div class="div__body">
+                <div class="div__title">
+                    <h1 id="temp_c">0°</h1>
+                    <span id="feelslike_c"></span>
+                </div>
+                <div class="div__image">
+                    <img id="icon" src="storage/img/cloud_and_sun_1.png">
+                    <span id="status">Cloudy</span>
+                </div>
+            </div>
+            <div id="div__footer" class="div__footer">
+                <span id="last_updated">January 01, 00:00</span>
+                <p><strong id="maxtemp_c">Day 0°</strong><strong id="mintemp_c">Night -0°</strong></p>
+            </div>
+            <form class="form__submit" action="?" method="get">
+                <input type="submit" class="active" value="Today">
+                <input type="submit" value="Tomorrow">
+                <input type="submit" value="10 days">
+            </form>
+        </nav>
+   </header>
+
+   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>

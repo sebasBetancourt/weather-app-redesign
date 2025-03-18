@@ -7,3 +7,138 @@
     color: var(--color-2);
     font-family: "OpenSans-Regular";
 }
+
+body {
+    background: var(--background-1);
+}
+header{
+    transition:height 0.4s ease-in-out;
+    background: red;
+    /* height: 420px; */
+}
+#navbar {
+    transition:height 0.4s ease-in-out, border-radius 0.4s ease-in-out , gap 0.4s ease-in-out;
+    width: 100%;
+    height: 345px;
+    padding: 20px 23px 0px;
+    background-image: url(../storage/img/background.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center calc(0% - 100px);
+    background-attachment: fixed;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 33px;
+    border-bottom-right-radius: 33px;
+    border-bottom-left-radius: 33px;
+   
+}
+
+.form__search {
+    display: flex;
+}
+.div__icon{
+    flex: 1;
+    position: relative;
+}
+.div__icon img{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -10;
+}
+.div__icon input{
+   width: 100%;
+   height: 40px;
+   border: none;
+   outline: none;
+   font-size: 22px;
+   background: transparent;
+   color: var(--color-1);
+   padding-right: 35px;
+}
+
+.div__body {
+    display: flex;
+    justify-content: space-between;
+}
+.div__title{
+    display: flex;
+    align-items: flex-end;
+    /* background: red; */
+    flex: 2;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+.div__title h1{
+    /* transition:font-size 0.4s ease-in-out; */
+    font-size: 6rem;
+    color: var(--color-1);
+    letter-spacing: -5px;
+}
+.div__title span{
+    /* transition:font-size 0.4s ease-in-out; */
+    font-size: 18px;
+    color: var(--color-1);
+}
+.div__image{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.div__image img{
+    /* transition:width 0.4s ease-in-out, height 0.4s ease-in-out; */
+    /* background: red; */
+    width: 95px;
+    height: 95px;
+    object-fit: contain;
+}
+.div__image span{
+    font-size: 22px;
+    color: var(--color-1);
+    text-align: center;
+}
+.div__footer {
+    transition:display 0.4s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.div__footer span{
+    color: var(--color-1);
+    font-size: 18px;
+}
+.div__footer p{
+    display: flex;
+    flex-direction: column;
+}
+.div__footer p strong{
+    color: var(--color-1);
+    font-size: 18px;
+}
+.form__submit{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.form__submit input{
+    width: 100%;
+    height: 42px;
+    outline: none;
+    border: none;
+    border-radius: 14px;
+    background-color: var(--color-1);
+    color: var(--color-2);
+    font-size: 16px;
+    font-weight: normal;
+}
+.form__submit input.active{
+    background: var(--button-1);
+}
